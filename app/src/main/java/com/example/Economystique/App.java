@@ -14,13 +14,13 @@ public class App {
 
     public App() {
         // Initialize components
-        frame = new JFrame("Simple Text Editor");
+        frame = new JFrame("Economystique");
         textArea = new JTextArea();
         fileChooser = new JFileChooser();
 
         // Setup the frame
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(600, 400);
+        frame.setSize(800, 600);
         frame.setLayout(new BorderLayout());
 
         // Add components
@@ -37,6 +37,10 @@ public class App {
 
         // Create File menu
         JMenu fileMenu = new JMenu("File");
+        JMenu navInv = new JMenu("Inventory");
+        JMenu navSales = new JMenu("Sales");
+        JMenu navCal = new JMenu("Calendar");
+        JMenu navAcc = new JMenu("Account");
 
         // Create menu items
         JMenuItem openItem = new JMenuItem("Open");
@@ -54,9 +58,12 @@ public class App {
         fileMenu.addSeparator();
         fileMenu.add(exitItem);
 
-        // Add File menu to menu bar
+        // Add items to menu bar
         menuBar.add(fileMenu);
-
+        menuBar.add(navInv);
+        menuBar.add(navSales);
+        menuBar.add(navCal);
+        menuBar.add(navAcc);
         return menuBar;
     }
 
