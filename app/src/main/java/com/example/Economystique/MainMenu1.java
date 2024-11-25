@@ -6,6 +6,7 @@ package com.example.Economystique;
 
 import java.awt.BorderLayout;
 import java.awt.ComponentOrientation;
+import java.awt.Font;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.BufferedReader;
@@ -61,10 +62,10 @@ public class MainMenu1 extends javax.swing.JFrame  {
         JMenuBar menuBar = new JMenuBar();
 
         // Create File menu
-        JMenu navAcc = new JMenu("Account");
-        JMenu navCal = new JMenu("Calendar");
-        JMenu navSales = new JMenu("Sales");
-        JMenu navInv = new JMenu("Inventory");
+        JMenuItem navAcc = new JMenuItem("Account");
+        JMenuItem navCal = new JMenuItem("Calendar");
+        JMenuItem navSales = new JMenuItem("Sales");
+        JMenuItem navInv = new JMenuItem("Inventory");
 
         menuBar.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
         
@@ -73,7 +74,14 @@ public class MainMenu1 extends javax.swing.JFrame  {
         menuBar.add(navCal);
         menuBar.add(navSales);
         menuBar.add(navInv);
-        
+
+        // Add action listeners to the menu items
+        navInv.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                InventoryStatus();
+            }
+        });
         //Add events
         navAcc.addActionListener(e -> Accounts());
         navCal.addActionListener(e -> Calendar());
@@ -84,14 +92,12 @@ public class MainMenu1 extends javax.swing.JFrame  {
     }
     
     public void InventoryStatus(){
-        contentPanel.removeAll();
-        JLabel title;
-        title = new JLabel("Inventory Status");
-        contentPanel.add(title, BorderLayout.CENTER);
-        contentPanel.revalidate();
-        contentPanel.repaint();
-        contentPanel.setVisible(true);
-        frame.add(contentPanel);
+        contentPanel.removeAll(); // Clear any previous content
+        JLabel title = new JLabel("Inventory Status", SwingConstants.CENTER);
+        title.setFont(new Font("Arial", Font.BOLD, 24)); // Optional: Set font style and size
+        contentPanel.add(title, BorderLayout.NORTH); // Add the JLabel to the content panel
+        contentPanel.revalidate(); // Revalidate the panel to update UI
+        contentPanel.repaint(); // Repaint to reflect changes
     }
     
     public void Sales(){
