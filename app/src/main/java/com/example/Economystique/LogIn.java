@@ -2,7 +2,7 @@
 package com.example.Economystique;
 
 import com.example.Economystique.SignUp;
-import com.example.Economystique.MainMenu;
+import com.example.Economystique.MainMenu1;
 
 public class LogIn extends javax.swing.JFrame {
 
@@ -211,7 +211,7 @@ public class LogIn extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       MainMenu mainMenuFrame = new MainMenu();
+       MainMenu1 mainMenuFrame = new MainMenu1();
        this.dispose();        
     }//GEN-LAST:event_jButton1ActionPerformed
 

@@ -6,7 +6,6 @@ package com.example.Economystique;
 public class App {
     public static void main(String[] args) {
         LoginAndSignup.main(args);
-        // SwingUtilities.invokeLater(App::new);
     }
 
     Object getGreeting() {
