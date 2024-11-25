@@ -1,6 +1,8 @@
 
 package com.example.Economystique;
 
+import com.example.Economystique.LogIn;
+
 
 public class SignUp extends javax.swing.JFrame {
 
@@ -38,6 +40,7 @@ public class SignUp extends javax.swing.JFrame {
         jPanel1.setLayout(null);
 
         jPanel2.setBackground(new java.awt.Color(60, 124, 176));
+        jPanel2.setMinimumSize(new java.awt.Dimension(400, 600));
 
         jLabel1.setText("LOGOLOGOLOGO");
 
@@ -55,13 +58,14 @@ public class SignUp extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addGap(170, 170, 170)
                 .addComponent(jLabel1)
-                .addContainerGap(314, Short.MAX_VALUE))
+                .addContainerGap(414, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2);
         jPanel2.setBounds(0, 0, 400, 500);
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setMinimumSize(new java.awt.Dimension(400, 600));
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 36)); // NOI18N
@@ -157,7 +161,7 @@ public class SignUp extends javax.swing.JFrame {
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel6)
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel3);

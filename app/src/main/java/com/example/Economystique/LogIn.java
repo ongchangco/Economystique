@@ -1,6 +1,8 @@
 
 package com.example.Economystique;
 
+import com.example.Economystique.SignUp;
+
 
 public class LogIn extends javax.swing.JFrame {
 
@@ -30,7 +32,6 @@ public class LogIn extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("LOGIN");
-        setPreferredSize(new java.awt.Dimension(800, 500));
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setPreferredSize(new java.awt.Dimension(800, 500));
@@ -102,7 +103,7 @@ public class LogIn extends javax.swing.JFrame {
 
         jButton2.setForeground(new java.awt.Color(102, 102, 102));
         jButton2.setText("Forgot password? ");
-        jButton2.setBorder(null);
+        jButton2.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -134,8 +135,8 @@ public class LogIn extends javax.swing.JFrame {
                                 .addComponent(jLabel3)
                                 .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 351, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(LeftLayout.createSequentialGroup()
-                        .addGap(86, 86, 86)
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(73, 73, 73)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 143, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jButton3)))
                 .addContainerGap(30, Short.MAX_VALUE))
@@ -161,7 +162,7 @@ public class LogIn extends javax.swing.JFrame {
                 .addGroup(LeftLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(65, Short.MAX_VALUE))
+                .addContainerGap(63, Short.MAX_VALUE))
         );
 
         jPanel2.add(Left);
