@@ -4,6 +4,8 @@
  */
 package com.example.Economystique;
 
+import java.awt.ComponentOrientation;
+
 /**
  *
  * @author Joumongo
@@ -15,6 +17,7 @@ public class MainMenu extends javax.swing.JFrame {
      */
     public MainMenu() {
         initComponents();
+        MenuRightToLeft();
     }
 
     /**
@@ -58,7 +61,6 @@ public class MainMenu extends javax.swing.JFrame {
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(800, 600));
 
         jPanel1.setBackground(new java.awt.Color(134, 185, 176));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
@@ -215,6 +217,9 @@ public class MainMenu extends javax.swing.JFrame {
     /**
      * @param args the command line arguments
      */
+    public void MenuRightToLeft(){
+        jMenuBar1.setComponentOrientation(ComponentOrientation.RIGHT_TO_LEFT);
+}
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -238,9 +243,10 @@ public class MainMenu extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainMenu.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+ 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
+            @Override
             public void run() {
                 new MainMenu().setVisible(true);
             }
