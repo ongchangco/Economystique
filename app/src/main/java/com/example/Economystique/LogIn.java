@@ -2,7 +2,7 @@
 package com.example.Economystique;
 
 import com.example.Economystique.SignUp;
-
+import com.example.Economystique.MainMenu;
 
 public class LogIn extends javax.swing.JFrame {
 
@@ -90,6 +90,11 @@ public class LogIn extends javax.swing.JFrame {
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Login");
         jButton1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jLabel4.setText("I don't have an account");
 
@@ -204,6 +209,11 @@ public class LogIn extends javax.swing.JFrame {
        SignUpFrame.setLocationRelativeTo(null);
        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       MainMenu mainMenuFrame = new MainMenu();
+       this.dispose();        
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
