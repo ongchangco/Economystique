@@ -15,6 +15,7 @@ public class MainMenu extends javax.swing.JFrame {
     /**
      * Creates new form MainMenu
      */
+    
     public MainMenu() {
         initComponents();
         MenuRightToLeft();
@@ -113,7 +114,7 @@ public class MainMenu extends javax.swing.JFrame {
 
         RequestButton.setText("Request Recommendation");
 
-        PoweredBy.setText("Powered by: Vertex AI");
+        PoweredBy.setText("Powered by: Hugging Face Machine Model");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -133,12 +134,8 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(AssesmentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(19, 19, 19))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(RequestButton, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(PoweredBy)
-                                .addGap(26, 26, 26)))
+                        .addGap(0, 83, Short.MAX_VALUE)
+                        .addComponent(RequestButton)
                         .addGap(74, 74, 74))))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -152,13 +149,17 @@ public class MainMenu extends javax.swing.JFrame {
                         .addGap(215, 215, 215)
                         .addComponent(Assesment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addComponent(PoweredBy)
+                .addGap(45, 45, 45))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(33, 33, 33)
                 .addComponent(InventoryStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 74, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(37, 37, 37)
+                .addGap(25, 25, 25)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Assesment)
                     .addComponent(Summary))
@@ -171,7 +172,7 @@ public class MainMenu extends javax.swing.JFrame {
                         .addComponent(OnHand, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(26, 26, 26)
                         .addComponent(DueIn, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 31, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 43, Short.MAX_VALUE)
                         .addComponent(Owed, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(18, 18, 18)
                 .addComponent(RequestButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -180,6 +181,22 @@ public class MainMenu extends javax.swing.JFrame {
                 .addGap(80, 80, 80))
         );
 
+        // Adding action listener for the "Request" button
+        RequestButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // Clear the jPanel1 by removing all components
+                jPanel1.removeAll();
+                jPanel1.revalidate();
+                jPanel1.repaint();
+
+                // Invoke the outside class
+                forecast();
+                // Revalidate and repaint the panel to update the layout
+                revalidate();
+                repaint();
+            }
+        });
+
         jToolBar1.setRollover(true);
 
         jButton1.setText("Account");
@@ -187,6 +204,20 @@ public class MainMenu extends javax.swing.JFrame {
         jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton1);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // Clear the panel by removing all components
+                jPanel1.removeAll();
+                jPanel1.revalidate();
+                jPanel1.repaint();
+
+                // Invoke the InventoryStatus method to reset the layout
+
+                // Revalidate and repaint to ensure layout updates
+                revalidate();
+                repaint();
+            }
+        });
 
         jButton2.setText("Calendar");
         jButton2.setFocusable(false);
@@ -198,12 +229,40 @@ public class MainMenu extends javax.swing.JFrame {
             }
         });
         jToolBar1.add(jButton2);
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // Clear the panel by removing all components
+                jPanel1.removeAll();
+                jPanel1.revalidate();
+                jPanel1.repaint();
+
+                // Invoke the InventoryStatus method to reset the layout
+
+                // Revalidate and repaint to ensure layout updates
+                revalidate();
+                repaint();
+            }
+        });
 
         jButton3.setText("Sales");
         jButton3.setFocusable(false);
         jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar1.add(jButton3);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                // Clear the panel by removing all components
+                jPanel1.removeAll();
+                jPanel1.revalidate();
+                jPanel1.repaint();
+
+                // Invoke the InventoryStatus method to reset the layout
+
+                // Revalidate and repaint to ensure layout updates
+                revalidate();
+                repaint();
+            }
+        });
 
         jButton4.setText("Inventory");
         jButton4.setFocusable(false);
@@ -392,7 +451,12 @@ public class MainMenu extends javax.swing.JFrame {
         pack();
         
     }
-
+    private void forecast(){
+       Forecast ForecastFrame = new Forecast();
+       ForecastFrame.setVisible(true);
+       ForecastFrame.pack();
+       ForecastFrame.setLocationRelativeTo(null);
+    }
     /**
      * @param args the command line arguments
      */

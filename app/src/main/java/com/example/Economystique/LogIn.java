@@ -2,7 +2,6 @@
 package com.example.Economystique;
 
 import com.example.Economystique.SignUp;
-import com.example.Economystique.MainMenu1;
 
 public class LogIn extends javax.swing.JFrame {
 

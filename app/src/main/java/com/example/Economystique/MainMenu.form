@@ -91,14 +91,8 @@
                           <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
                       </Group>
                       <Group type="102" alignment="1" attributes="0">
-                          <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="RequestButton" alignment="1" min="-2" max="-2" attributes="0"/>
-                              <Group type="102" alignment="1" attributes="0">
-                                  <Component id="PoweredBy" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
+                          <EmptySpace min="0" pref="83" max="32767" attributes="0"/>
+                          <Component id="RequestButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="74" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -119,6 +113,11 @@
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
+              <Group type="102" alignment="1" attributes="0">
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  <Component id="PoweredBy" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              </Group>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
@@ -126,7 +125,7 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   <Component id="InventoryStatus" min="-2" pref="74" max="-2" attributes="0"/>
-                  <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="25" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="Assesment" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="Summary" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -140,7 +139,7 @@
                           <Component id="OnHand" min="-2" pref="48" max="-2" attributes="0"/>
                           <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                           <Component id="DueIn" min="-2" pref="48" max="-2" attributes="0"/>
-                          <EmptySpace pref="31" max="32767" attributes="0"/>
+                          <EmptySpace pref="43" max="32767" attributes="0"/>
                           <Component id="Owed" min="-2" pref="48" max="-2" attributes="0"/>
                       </Group>
                   </Group>
@@ -257,10 +256,13 @@
           <Properties>
             <Property name="text" type="java.lang.String" value="Request Recommendation"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="// Adding action listener for the &quot;Request&quot; button&#xa;    RequestButton.addActionListener(new java.awt.event.ActionListener() {&#xa;        public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;            // Clear the jPanel1 by removing all components&#xa;            jPanel1.removeAll();&#xa;            jPanel1.revalidate();&#xa;            jPanel1.repaint();&#xa;&#xa;            // Invoke the outside class&#xa;            forecast();&#xa;            // Revalidate and repaint the panel to update the layout&#xa;            revalidate();&#xa;            repaint();&#xa;        }&#xa;    });"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JLabel" name="PoweredBy">
           <Properties>
-            <Property name="text" type="java.lang.String" value="Powered by: Vertex AI"/>
+            <Property name="text" type="java.lang.String" value="Powered by: Hugging Face Machine Model"/>
           </Properties>
         </Component>
       </SubComponents>
@@ -279,6 +281,9 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton1.addActionListener(new java.awt.event.ActionListener() {&#xa;        public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;            // Clear the panel by removing all components&#xa;            jPanel1.removeAll();&#xa;            jPanel1.revalidate();&#xa;            jPanel1.repaint();&#xa;&#xa;            // Invoke the InventoryStatus method to reset the layout&#xa;            &#xa;&#xa;            // Revalidate and repaint to ensure layout updates&#xa;            revalidate();&#xa;            repaint();&#xa;        }&#xa;    });"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButton2">
           <Properties>
@@ -290,6 +295,9 @@
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton2ActionPerformed"/>
           </Events>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton2.addActionListener(new java.awt.event.ActionListener() {&#xa;        public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;            // Clear the panel by removing all components&#xa;            jPanel1.removeAll();&#xa;            jPanel1.revalidate();&#xa;            jPanel1.repaint();&#xa;&#xa;            // Invoke the InventoryStatus method to reset the layout&#xa;            &#xa;&#xa;            // Revalidate and repaint to ensure layout updates&#xa;            revalidate();&#xa;            repaint();&#xa;        }&#xa;    });"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButton3">
           <Properties>
@@ -298,6 +306,9 @@
             <Property name="horizontalTextPosition" type="int" value="0"/>
             <Property name="verticalTextPosition" type="int" value="3"/>
           </Properties>
+          <AuxValues>
+            <AuxValue name="JavaCodeGenerator_AddingCodePost" type="java.lang.String" value="jButton3.addActionListener(new java.awt.event.ActionListener() {&#xa;        public void actionPerformed(java.awt.event.ActionEvent evt) {&#xa;            // Clear the panel by removing all components&#xa;            jPanel1.removeAll();&#xa;            jPanel1.revalidate();&#xa;            jPanel1.repaint();&#xa;&#xa;            // Invoke the InventoryStatus method to reset the layout&#xa;            &#xa;&#xa;            // Revalidate and repaint to ensure layout updates&#xa;            revalidate();&#xa;            repaint();&#xa;        }&#xa;    });"/>
+          </AuxValues>
         </Component>
         <Component class="javax.swing.JButton" name="jButton4">
           <Properties>
